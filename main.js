@@ -1,33 +1,27 @@
 
-//Variables
 let nombreDeUsuario
 let contraseña
 let nombreDeUsuarioConfirm
 let contraseñaConfirm
 
-nombreDeUsuario = prompt("Registre su nombre de ususario")
+nombreDeUsuario = prompt("Registre su nombre de usuario")
 contraseña = prompt("Registre su contraseña")
 
-while (confirm("¿Estos son sus datos?") != nombreDeUsuario && contraseña) {
-    nombreDeUsuario = prompt("Registre su nombre de ususario")
-    contraseña = prompt("Registre su contraseña")
+while (confirm("¿Estos son sus datos? " + nombreDeUsuario + " " + contraseña) == false) {
+    nombreDeUsuario = prompt("Registre su nombre de usuario");
+    contraseña = prompt ("Registre si contraseña");
 }
 
-nombreDeUsuario = nombreDeUsuarioConfirm
-contraseña = contraseñaConfirm
+nombreDeUsuarioConfirm = prompt ("Ingrese su nombre de ususario para confirmar");
+contraseñaConfirm = prompt ("Ingrese su contraseña para confirmar")
 
-if (nombreDeUsuario == nombreDeUsuarioConfirm && contraseña == contraseñaConfirm) {
-    prompt("Ingrese su nombre de usuario")
-    prompt("Ingrese su contraseña")
+while(nombreDeUsuarioConfirm != nombreDeUsuario || contraseñaConfirm != contraseña){
+    alert ("Sus datos no coinciden");
+    nombreDeUsuarioConfirm = prompt ("Ingrese su nombre de usuario para confirmar");
+    contraseñaConfirm = prompt ("Ingrese su contraseña para confirmar");
 }
 
-while (confirm("¿Estos son sus datos?") != nombreDeUsuarioConfirm && contraseñaConfirm) {
-    prompt("Ingrese su nombre de usuario")
-    prompt("Ingrese su contraseña")
-}
-
-alert("BIENVENIDO")
-
+alert ("BIENVENIDO")
 
 
 
