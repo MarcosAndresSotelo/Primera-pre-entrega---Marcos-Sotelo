@@ -1,19 +1,30 @@
 
+//Variables
 let nombreDeUsuario
 let contraseña
 let nombreDeUsuarioConfirm
 let contraseñaConfirm
 
-nombreDeUsuario = prompt("Registre su nombre de usuario");
-contraseña = prompt("Registre su contraseña");
+//Registro de usuario
+function nombreUsuario() {
+    nombreDeUsuario = prompt("Registre su nombre de usuario");
+    contraseña = prompt("Registre su contraseña");
+}
+
+nombreUsuario()
 
 while (confirm("¿Estos son sus datos? " + nombreDeUsuario + " " + contraseña) == false) {
     nombreDeUsuario = prompt("Registre su nombre de usuario");
     contraseña = prompt("Registre si contraseña");
 }
 
-nombreDeUsuarioConfirm = prompt("Ingrese su nombre de ususario para confirmar");
-contraseñaConfirm = prompt("Ingrese su contraseña para confirmar");
+//Confirmacion de datos
+function nombreUsuarioConfirm() {
+    nombreDeUsuarioConfirm = prompt("Ingrese su nombre de ususario para confirmar");
+    contraseñaConfirm = prompt("Ingrese su contraseña para confirmar");
+}
+
+nombreUsuarioConfirm()
 
 while (nombreDeUsuarioConfirm != nombreDeUsuario || contraseñaConfirm != contraseña) {
     alert("Sus datos no coinciden");
@@ -25,9 +36,9 @@ alert("BIENVENIDO")
 
 alert("REALICE SU COMPRA")
 
-
+//Productos de compra
+function productosDeCompra() { 
     let productoSeleccionado
-
     while (productoSeleccionado != "Almohada" && productoSeleccionado != "Mantel estampado" && productoSeleccionado != "Mantel liso" && productoSeleccionado != "Acolchado") {
         productoSeleccionado = prompt("Seleccione un producto: Almohada, Mantel estampado, Mantel liso, Acolchado")
         switch (productoSeleccionado) {
@@ -48,8 +59,9 @@ alert("REALICE SU COMPRA")
                 break;
         }
     }
+}
 
-
+productosDeCompra()
 
 alert("GRACIAS POR SU COMPRA")
 
